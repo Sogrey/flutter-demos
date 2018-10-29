@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new Center(
         child: new Card(
-          color: Colors.blue,
+          color: Color(0xff0000),
           child: new Container(
             padding: const EdgeInsets.all(16.0),
             child: new Column(
@@ -78,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 ///自定义一个Button控件
 class MyButton extends StatelessWidget {
 
