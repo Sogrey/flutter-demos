@@ -2,7 +2,6 @@
 
 A new Flutter application.
 
-## Getting Started
+![](https://raw.githubusercontent.com/Sogrey/flutter-demos/master/flutter_demo/1.gif)
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+[apk](https://github.com/Sogrey/flutter-demos/blob/master/flutter_demo/app.apk?raw=true)
