@@ -15,7 +15,7 @@ For help getting started with Flutter, view our online [documentation](https://f
 
 如果有多台设备连接，使用：
 
-> flutter run -d <deviceId>
+> flutter run -d \<deviceId\>
 
 命令行flutter 打包apk
 
