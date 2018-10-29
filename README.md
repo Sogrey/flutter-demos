@@ -1,7 +1,7 @@
 # flutter-demos
 demos for flutter.
 
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3c49f03cd80478ea5ff10630515b77d)](https://www.codacy.com/app/Sogrey/flutter-demos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Sogrey/flutter-demos&amp;utm_campaign=Badge_Grade)
 
 ## Getting Started
 
@@ -28,4 +28,3 @@ For help getting started with Flutter, view our online [documentation](https://f
 > ctrl + c
 >
 > 终止批处理操作吗(Y/N)? y
-
