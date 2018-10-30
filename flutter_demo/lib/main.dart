@@ -1,4 +1,7 @@
+import 'package:FlutterDemo/second.dart';
+import 'package:FlutterDemo/webview.dart';
 import 'package:flutter/material.dart';
+//import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';//webview 插件
 
 void main() => runApp(new MyApp());
 
@@ -11,6 +14,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(title: 'Flutter 示例主页'),
+      routes: {
+        "SecondPage": (BuildContext context) => new Second()
+      },
     );
   }
 }
@@ -80,6 +86,49 @@ class _MyHomePageState extends State<MyHomePage> {
                       .textTheme
                       .display3,
                 ),
+                new Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new MyButton(
+                      bgColor: Colors.white,
+                      iconColor: Colors.blue,
+                      icon: Icons.link,
+                      onTap: () {
+                        ///方法一 - 无参
+                        //跳转到新的 页面我们需要调用 navigator.push方法  -
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => new Second()
+                            )
+                        );
+                      },
+                    ),
+                    new MyButton(
+                      bgColor: Colors.white,
+                      iconColor: Colors.blue,
+                      icon: Icons.link,
+                      onTap: () {
+                        ///方法二 - 有参
+                        //跳转到新的 页面我们需要调用 navigator.push方法  -
+                        Navigator.push(context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return new Second(title: "第二个页面");
+                                }));
+                      },
+                    ),
+                    new MyButton(
+                      bgColor: Colors.white,
+                      iconColor: Colors.blue,
+                      icon: Icons.link,
+                      onTap: () {
+                        ///方法二 - 这种路由的缺点是不能传递参数。
+                        Navigator.pushNamed(context, "SecondPage");
+                      },
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -87,6 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton:
       new MyButton(
+        icon: Icons.add,
         onTap: _incrementCounter,
       ),
 //      new FloatingActionButton(
@@ -102,8 +152,14 @@ class _MyHomePageState extends State<MyHomePage> {
 class MyButton extends StatelessWidget {
 
   final VoidCallback onTap;
+  final Color bgColor;
+  final Color iconColor;
+  final IconData icon;
 
   MyButton({
+    this.bgColor,
+    this.icon,
+    this.iconColor,
     this.onTap,
   });
 
@@ -111,14 +167,14 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Material(
       borderRadius: new BorderRadius.circular(8.0),
-      color: Colors.red,
+      color: bgColor == null ? Colors.red : bgColor,
       child: new InkWell(
         onTap: onTap,
         child: new Container(
           padding: const EdgeInsets.all(16.0),
           child: new Icon(
-            Icons.add,
-            color: Colors.white,
+            icon,
+            color: iconColor == null ? Colors.white : iconColor,
             size: 30.0,
           ),
         ),
