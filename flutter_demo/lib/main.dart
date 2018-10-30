@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new Center(
         child: new Card(
-          color: Color(0xff0000),
+          color: Colors.blue,
           child: new Container(
             padding: const EdgeInsets.all(16.0),
             child: new Column(
