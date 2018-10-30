@@ -47,12 +47,31 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+                new Image.network(
+                  "https://10.url.cn/qqke_course_info/ajNVdqHZLLBj6T1tP44va445Ij0zrdK35YHzq435U6xZcrX162Jj51XH04mmvmFSNXkFsJCdwfA/",
+                  scale: 1.0,
+
+                  ///1.0不缩放
+                  alignment: Alignment.center,
+                ),
                 new Text(
-                  'You have pushed the button this many times:',
-                  style: new TextStyle(
-                    color: Colors.white,
-                    fontSize: _counter.toDouble(),
-                  ),
+                    'You have pushed the button this many times:',
+                    style: new TextStyle(
+                        color: Colors.white,
+                        fontSize: _counter.toDouble(),
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        inherit: true,
+                        decoration: TextDecoration.lineThrough,
+                        decorationColor: Colors.red,
+                        decorationStyle: TextDecorationStyle.dotted,
+                        letterSpacing: 2.0,
+                        wordSpacing: 5.0
+                    ),
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    overflow: TextOverflow.clip,
+                    textScaleFactor: 1.0
                 ),
                 new Text(
                   '$_counter',
