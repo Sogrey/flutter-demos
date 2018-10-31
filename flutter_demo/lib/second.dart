@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class Second extends StatelessWidget {
-  final title;
-
   ///页面标题
+  final String title;
 
   const Second({Key key, this.title}) : super(key: key);
 
@@ -15,7 +14,6 @@ class Second extends StatelessWidget {
         title: new Text(title == null ? "Second Page" : title),
       ),
       body: new Center(
-
         child: new Column(
           children: <Widget>[
             new RaisedButton(child: new Text("注销"), onPressed: () {

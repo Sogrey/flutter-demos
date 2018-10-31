@@ -14,9 +14,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(title: 'Flutter 示例主页'),
-      routes: {
+      routes: { //静态注册路由，不能传递参数
         "SecondPage": (BuildContext context) => new Second()
       },
+//      routes: <String, WidgetBuilder>{
+//        // 这里可以定义静态路由，不能传递参数
+//        '/router/second': (_) => new Second(),
+//      },
     );
   }
 }
