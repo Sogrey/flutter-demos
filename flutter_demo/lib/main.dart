@@ -1,4 +1,5 @@
 import 'package:FlutterDemo/second.dart';
+
 //import 'package:FlutterDemo/webview.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';//webview 插件
@@ -53,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.blue,
           child: new Container(
             padding: const EdgeInsets.all(16.0),
+            margin: new EdgeInsets.all(5.0),
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
@@ -139,15 +141,27 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton:
-      new MyButton(
-        icon: Icons.add,
-        onTap: _incrementCounter,
-      ),
-//      new FloatingActionButton(
-//        onPressed: _incrementCounter,
-//        tooltip: 'Increment',
-//        child: new Icon(Icons.add),
+//      new MyButton(
+//        icon: Icons.add,
+//        onTap: _incrementCounter,
 //      ),
+      new FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        elevation: 0.0,
+        highlightElevation: 0.0,
+        mini: true,
+        shape: BeveledRectangleBorder(
+          side: BorderSide(
+            color: Colors.blue,
+            width: 3.0,
+            style: BorderStyle.none,
+          ),
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        isExtended: true,
+        child: new Icon(Icons.add),
+      ),
     );
   }
 }
@@ -169,17 +183,22 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Material(
-      borderRadius: new BorderRadius.circular(8.0),
-      color: bgColor == null ? Colors.red : bgColor,
-      child: new InkWell(
-        onTap: onTap,
-        child: new Container(
-          padding: const EdgeInsets.all(16.0),
-          child: new Icon(
-            icon,
-            color: iconColor == null ? Colors.white : iconColor,
-            size: 30.0,
+    return new Container(
+      padding: const EdgeInsets.all(0.0),
+      margin: new EdgeInsets.all(5.0),
+      child: new Material(
+        borderRadius: new BorderRadius.circular(8.0),
+        color: bgColor == null ? Colors.red : bgColor,
+        child: new InkWell(
+          onTap: onTap,
+          child: new Container(
+            padding: const EdgeInsets.all(16.0),
+            margin: new EdgeInsets.all(5.0),
+            child: new Icon(
+              icon,
+              color: iconColor == null ? Colors.white : iconColor,
+              size: 30.0,
+            ),
           ),
         ),
       ),
