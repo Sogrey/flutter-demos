@@ -2,6 +2,7 @@
 demos for flutter.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3c49f03cd80478ea5ff10630515b77d)](https://www.codacy.com/app/Sogrey/flutter-demos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Sogrey/flutter-demos&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/sogrey/flutter-demos/badge)](https://www.codefactor.io/repository/github/sogrey/flutter-demos)
 
 ## Getting Started
 
